@@ -3,26 +3,12 @@ extends layout
 
 block content
 
-    //USER1
-    h1 Juan Francisco Cisneros
-    h2 Cumbaya, Quito, Ecuador
-    h2 099 999 9999
+    - let ord = 0
+    pre    ORD      NOMBRE        DIRECCION        TELEFONO
+    each usuario in users
+        pre #{ord} #{usuario.nombre}        #{usuario.direccion}        #{usuario.telefono}
+        - ord++
 
-    //space
-    br
-
-    //USER2
-    h1 Pedro Perez
-    h2 Tumbaco, Quito, Ecuador
-    h2 011 111 1111
-
-    //space
-    br
-
-    //USER3
-    h1 Maria Perez
-    h2 Pifo, Quito, Ecuador
-    h2 022 222 2222
 
 
 

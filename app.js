@@ -4,6 +4,11 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+
+//MONGO REQUIRE
+require('./appServer/models/db'); //INCORPORAR EL MODELO A LA APP
+
+//ROUTES
 const indexRouter = require('./appServer/routes/index');
 const usersRouter = require('./appServer/routes/users');
 
