@@ -1,7 +1,3 @@
-
-
-
-
 let users = [
     {
         nombre:'Juan Francisco Cisneros',
@@ -19,16 +15,14 @@ let users = [
         telefono:'022 222 2222',
     },
 
-
 ];
-
-
 
 
 //user controller
 userHomePage = (req, res) => {
     res.render('users',{users});
 }
+
 
 module.exports = {
     userHomePage
