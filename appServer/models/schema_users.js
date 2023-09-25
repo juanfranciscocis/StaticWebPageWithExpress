@@ -52,7 +52,7 @@ const usuariosSchema = new mongoose.Schema({
 const Usuario = new mongoose.model('user', usuariosSchema);
 const user = new Usuario({
     name: 'Juan',
-    lastname: 'Cisneros',
+    lastname: 'Cisneros Guzman',
     identification: 1725412309,
     direction: 'Quito',
     age: 21,
@@ -69,6 +69,12 @@ const user = new Usuario({
     });
 
 //GUARDAR EL MODELO
-user.save();
+//wait for connection then save
+mongoose.connection.on('connected', () => {
+    user.save();
+    console.log('User saved');
+});
+
+
 
 

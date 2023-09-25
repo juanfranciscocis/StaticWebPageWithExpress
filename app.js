@@ -11,6 +11,7 @@ require('./appServer/models/db'); //INCORPORAR EL MODELO A LA APP
 //ROUTES
 const indexRouter = require('./appServer/routes/index');
 const usersRouter = require('./appServer/routes/users');
+const apiRouter = require('./appServer/routes/index');
 
 const app = express();
 
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use ('/api', apiRouter); //API ROUTER
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
