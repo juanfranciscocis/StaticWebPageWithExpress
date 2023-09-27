@@ -50,7 +50,7 @@ const usuariosSchema = new mongoose.Schema({
 
 //COMPILAR EL MODELO
 const Usuario = new mongoose.model('user', usuariosSchema);
-const user = new Usuario({
+/*const user = new Usuario({
     name: 'Juan',
     lastname: 'Cisneros Guzman',
     identification: 1725412309,
@@ -73,7 +73,7 @@ const user = new Usuario({
 mongoose.connection.on('connected', () => {
     user.save();
     console.log('User saved');
-});
+});*/
 
 
 

@@ -6,12 +6,12 @@ const logger = require('morgan');
 
 
 //MONGO REQUIRE
-require('./appServer/models/db'); //INCORPORAR EL MODELO A LA APP
+require('./appApi/models/db'); //INCORPORAR EL MODELO A LA APP
 
 //ROUTES
 const indexRouter = require('./appServer/routes/index');
 const usersRouter = require('./appServer/routes/users');
-const apiRouter = require('./appServer/routes/index');
+const apiRouter = require('./appApi/routes/index');
 
 const app = express();
 

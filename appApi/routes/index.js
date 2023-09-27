@@ -4,15 +4,15 @@ const ctrlUsers = require('../controllers/userController');
 
 //DEFINIR LAS RUTAS PARA LAS ACCIONES CRUD, SOBRE LA COLLECCION USERS
 router.route('/users')
-    .post()
-    .get();
+    .post(ctrlUsers.userCreate)
+    .get(ctrlUsers.userRead);
 
 
 
 router.route('/users/:userid')
-    .get()
-    .put()
-    .delete();
+    .get(ctrlUsers.userReadById)
+    .put(ctrlUsers.userUpdate)
+    .delete(ctrlUsers.userDelete);
 
 
 
