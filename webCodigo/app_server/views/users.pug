@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p #{title}
+
+  pre Ord. Nombre        Apellido        Direccion 
+
+  -let ord=0
+
+
+  each usuario in usuarios  
+    -ord++
+    pre #{ord}      #{usuario.nombre}          #{usuario.apellido}            #{usuario.direccion}
