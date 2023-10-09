@@ -14,6 +14,9 @@ router.route('/users/:userid')
     .put(ctrlUsers.userUpdate)
     .delete(ctrlUsers.userDelete);
 
+router.route('/search/:name')
+    .get(ctrlUsers.userFindName);
+
 
 
 

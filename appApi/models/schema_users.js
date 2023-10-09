@@ -50,6 +50,7 @@ const usuariosSchema = new mongoose.Schema({
 
 //COMPILAR EL MODELO
 const Usuario = new mongoose.model('user', usuariosSchema);
+new mongoose.model('user', usuariosSchema);
 /*const user = new Usuario({
     name: 'Juan',
     lastname: 'Cisneros Guzman',
