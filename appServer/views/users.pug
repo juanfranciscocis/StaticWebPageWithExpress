@@ -1,14 +1,23 @@
-
 extends layout
 
 block content
-
-    - let ord = 0
-    pre    ORD      NOMBRE        DIRECCION        TELEFONO
-    each usuario in users
-        pre #{ord} #{usuario.nombre}        #{usuario.direccion}        #{usuario.telefono}
+  h1= title
+  p Welcome to #{title}
+  hr
+  table.table.table-striped
+    thead
+      tr
+        th(scope="col") #
+        th(scope="col") Nombre
+        th(scope="col") Apellido
+        th(scope="col") Direccion 
+    tbody
+      - let ord=0
+      each usuario in usuarios 
         - ord++
-
-
-
-
+        tr
+          td #{ord}
+          td #{usuario.name}
+          td #{usuario.lastname}
+          td #{usuario.direction}
+  hr

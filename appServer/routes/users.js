@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const {userHomePage} = require("../controllers/userController");
+const {users} = require("../controllers/userController");
 
 /* GET users listing. */
-router.get('/', userHomePage);
+router.get('/', users);
 
 module.exports = router;
