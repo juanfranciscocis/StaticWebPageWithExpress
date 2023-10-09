@@ -90,11 +90,22 @@ const userUpdate = (req, res) => {
 
 // DELETE - USER
 const userDelete = (req, res) => {
-    res
-        .status(204) //ESTADO DE LA RESPUESTA = 204 = NO CONTENT (DELETE SUCCESS)
-        .json({
-            "status": "success delete",
-        });
+    if (req.params.userid) {
+        users.findByIdAndDelete(req.params.userid).exec()
+            .then((user) => {
+                res
+                    .status(204) //ESTADO DE LA RESPUESTA = 204 = NO CONTENT (DELETE SUCCESS)
+                    .json({
+                        "status": "success delete",
+                    });
+            }).catch((err) => {
+                res
+                    .status(404) //ESTADO DE LA RESPUESTA = 404 = NOT FOUND
+                    .json({
+                        "status": "error delete",
+                    });
+            });
+    }
 }
 
 // READ - USER BY ID
