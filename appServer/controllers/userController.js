@@ -5,7 +5,7 @@ const apiOptions = {
     server: 'http://localhost:3000'
 };
 if(process.env.NODE_ENV === 'production'){
-    apiOptions.server = 'https://dw3-2021-1.herokuapp.com';
+    apiOptions.server = 'https://express-prueba.onrender.com';
 }
 
 
