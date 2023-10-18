@@ -1,5 +1,6 @@
 //REQUIERE MONGOOSE
 const mongoose = require('mongoose');
+const {flatten} = require("express/lib/utils");
 //ESQUEMA DE LA COLECCION USERS
 const usuariosSchema = new mongoose.Schema({
     name: {
@@ -29,7 +30,7 @@ const usuariosSchema = new mongoose.Schema({
     subjects: {
         class: {
             type: String,
-            required: true,
+            required: false,
             enum: [
                 'Presencial',
                 'Virtual',

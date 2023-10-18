@@ -13,11 +13,12 @@ block content
         th(scope="col") Direccion 
     tbody
       - let ord=0
-      each usuario in usuarios 
+      each usuario in usuarios
         - ord++
         tr
           td #{ord}
           td #{usuario.name}
           td #{usuario.lastname}
-          td #{usuario.direction}
+
+
   hr

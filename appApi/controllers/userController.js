@@ -8,7 +8,7 @@ const users = mongoose.model('user'); //MODELO QUE ME PERMITE INTERACTUAR CON LA
 const userCreate = (req, res) => {
     users.create({
         name: req.body.name,
-        lasName: req.body.lasName,
+        lastname: req.body.lastname,
         identification: req.body.identification,
         direction: req.body.direction,
         age: req.body.age,
@@ -32,6 +32,7 @@ const userCreate = (req, res) => {
             .status(400) //ESTADO DE LA RESPUESTA = 400 = BAD REQUEST
             .json({
                 "status": "error create",
+                "message": err
             });
     });
 }
